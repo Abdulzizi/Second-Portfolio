@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import "./globals.css";
 import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
@@ -6,6 +8,10 @@ import ParticlesComponent from "@/components/particle";
 
 const username = process.env.GITHUB_USERNAME || data.githubUsername;
 const displayName = data.displayName || username;
+
+interface RootLayoutProps {
+  children: ReactNode;
+}
 
 /** @type {import('next').Metadata} */
 export const metadata = {
@@ -41,7 +47,7 @@ const calSans = LocalFont({
   variable: "--font-calsans",
 });
 
-export default function RootLayout({ children }) {
+export default function RootLayout( {children}: RootLayoutProps ) {
   return (
     <html lang="en" className={`${inter.variable} ${calSans.variable}`}>
       <body className="bg-[#191919] bg-gradient-to-tl from-gray via-[#222831] to-[#393E46]">
