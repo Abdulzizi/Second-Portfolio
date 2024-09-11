@@ -1,5 +1,27 @@
+import { cache } from "react";
+
+// const revalidate = 60;
+// const MINUTES_5 = 60 * 5;
+// const HOURS_1 = 60 * 60;
+// const HOURS_12 = 60 * 60 * 12;
+
 const API_BASE_URL = "https://api.github.com";
 // const VERCEL_API_URL = "https://api.vercel.com/v9/projects";
+
+interface ActivityPayload {
+  size?: number;
+  action?: string;
+  ref_type?: string;
+  pull_request?: {
+    merged?: boolean;
+  };
+}
+
+interface Activity {
+  type: string;
+  payload: ActivityPayload;
+}
+
 
 const fetchFromGitHub = async (endpoint: string, options: RequestInit = {}) => {
   const url = `${API_BASE_URL}${endpoint}`;
@@ -43,3 +65,20 @@ export const getUserOrganizations = async (username: string) => {
   console.timeEnd("getUserOrganizations");
   return data.data.user.organizations.nodes;
 };
+
+export const getRecentUserActivity = cache(async (username: string): Promise<Activity[]> => {
+  console.log("Fetching recent activity for", username);
+  console.time("getRecentUserActivity");
+
+  const res = await fetch(`https://api.github.com/users/${username}/events`, {
+    headers: { Authorization: `Bearer ${process.env.NEXT_PUBLIC_GH_TOKEN}` },
+  });
+
+  if (!res.ok) {
+    throw new Error(`Failed to fetch data: ${res.statusText}`);
+  }
+
+  const response: Activity[] = await res.json();
+  console.timeEnd("getRecentUserActivity");
+  return response;
+});
