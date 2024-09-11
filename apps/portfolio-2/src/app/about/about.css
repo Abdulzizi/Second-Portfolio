@@ -1,0 +1,26 @@
+@keyframes neonBorderShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-neon-glow {
+  background: linear-gradient(90deg, #00f, #0ff, #f0f, #ff0, #00f);
+  background-size: 300% 300%;
+  border-radius: 12px;
+  padding: 5px;
+  animation: neonBorderShine 3s linear infinite;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.glowing-border {
+  background: #333; 
+  border-radius: 12px; 
+  padding: 16px;
+}

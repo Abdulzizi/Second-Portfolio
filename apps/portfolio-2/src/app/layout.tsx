@@ -52,9 +52,7 @@ export default function RootLayout( {children}: RootLayoutProps ) {
     <html lang="en" className={`${inter.variable} ${calSans.variable}`}>
       <body className="bg-[#191919] bg-gradient-to-tl from-gray via-[#222831] to-[#393E46]">
         <ParticlesComponent />
-        <main className="px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
           {children}
-        </main>
       </body>
     </html>
   );
