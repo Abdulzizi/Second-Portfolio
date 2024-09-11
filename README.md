@@ -81,6 +81,3 @@ Learn more about the power of Turborepo:
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
 =======
-# Second-Portfolio
-[IN PROGRES]
->>>>>>> 52cef0f62eddebb95778317b23849fb6cb253f42
