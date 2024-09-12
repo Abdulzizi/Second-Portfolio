@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "name": "E-Commerce Fashion Website",
+      "description": "A cutting-edge web application built with Next.js, with fullstack feature like authentication with Clerk.js and payment feature with midtrans with serverless db with Neon that use PostgreSQL as Database as well featuring real-time data processing and interactive visualizations.",
+      "github": "https://github.com/user/project-a",
+      "deploy": "https://project-a.vercel.app",
+      "image": "/images/2.png?height=300&width=400"
+    },
+    {
+        "id": 2,
+        "name": "Portfolio Website",
+        "description": "Yep, you're looking at it! This is my personal portfolio website where I showcase my projects, skills, and what I'm all about. Built with a clean design and smooth interactions, it’s the go-to spot for anyone curious about what I’ve been working on.",
+        "github": "https://github.com/Abdulzizi/Turborepo-Project",
+        "deploy": "https://project-b.vercel.app",
+        "image": "/images/1.png"
+      }      
+  ]  

@@ -19,7 +19,7 @@ export const Navigation: React.FC = () => {
     observer.observe(ref.current);
 
     return () => {
-      observer.disconnect(); // Clean up observer on unmount
+      observer.disconnect(); 
     };
   }, []);
 
@@ -42,7 +42,7 @@ export const Navigation: React.FC = () => {
               About
             </Link>
             <Link
-              href="/projects"
+              href="/project"
               className="duration-200 text-zinc-400 hover:text-zinc-100"
             >
               Projects

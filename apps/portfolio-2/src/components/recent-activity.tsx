@@ -20,12 +20,13 @@ interface RecentActivityProps {
   username: string;
 }
 
+
 export const RecentActivity: React.FC<RecentActivityProps> = async ({ username }) => {
   // Fetch recent user activity
   const recentUserActivity: Activity[] = await getRecentUserActivity(username);
 
   // Summarize the activity
-  const activitySummary = recentUserActivity.reduce((acc: any, activity: Activity) => {
+  const activitySummary = recentUserActivity.reduce((acc: Record<string, number>, activity: Activity) => {
     if (activity.type === 'PushEvent') {
       acc.commits = acc.commits || 0;
       acc.commits += activity.payload.size || 0;

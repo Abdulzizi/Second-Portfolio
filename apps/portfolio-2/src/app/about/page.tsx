@@ -16,7 +16,7 @@ export default function AboutMe() {
       <div className="min-h-screen flex flex-col items-center justify-center p-2 sm:p-4">
         <Navigation />
         <div className="animate-neon-glow mt-6 sm:mt-8 w-full max-w-sm sm:max-w-lg mx-4 sm:mx-8">
-          <Card className="bg-gray-800 shadow-xl border-none">
+          <Card className="bg-[#191919] shadow-xl border-none">
             <CardContent className="p-4 sm:p-6">
               <ProfileSection />
               <Description />
@@ -76,7 +76,7 @@ const SocialLinks = () => {
           <Button
             variant="outline"
             size="icon"
-            className="hover:bg-gradient-to-r from-blue-400 to-purple-600 hover:text-white transition-colors"
+            className="bg-white hover:bg-gradient-to-r from-blue-400 to-purple-600 hover:text-white transition-colors"
             aria-label={label}
           >
             <Icon className="h-4 w-4 sm:h-5 sm:w-5" />

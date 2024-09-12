@@ -22,6 +22,10 @@ interface Activity {
   payload: ActivityPayload;
 }
 
+interface SocialAccount {
+  provider: string;
+  url: string;
+}
 
 const fetchFromGitHub = async (endpoint: string, options: RequestInit = {}) => {
   const url = `${API_BASE_URL}${endpoint}`;
@@ -81,4 +85,28 @@ export const getRecentUserActivity = cache(async (username: string): Promise<Act
   const response: Activity[] = await res.json();
   console.timeEnd("getRecentUserActivity");
   return response;
+});
+
+export const getSocialAccounts = cache(async (username: string): Promise<SocialAccount[]> => {
+  console.log("Fetching social accounts for", username);
+  console.time("getSocialAccounts");
+
+  // Call the actual GitHub API endpoint
+  const endpoint = `/users/${username}/social_accounts`;
+  const socialAccountsResponse = await fetchFromGitHub(endpoint);
+
+  console.timeEnd("getSocialAccounts");
+
+  // Check if the response is in the expected format
+  if (!Array.isArray(socialAccountsResponse)) {
+    throw new Error("Invalid response format from the API");
+  }
+
+  // Map the response to the SocialAccount interface
+  const socialAccounts: SocialAccount[] = socialAccountsResponse.map((account: SocialAccount) => ({
+    provider: account.provider,
+    url: account.url,
+  }))
+
+  return socialAccounts;
 });

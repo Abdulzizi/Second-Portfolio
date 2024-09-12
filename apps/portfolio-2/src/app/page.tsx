@@ -32,12 +32,12 @@ const UserIcon: React.FC<AsyncComponentProps> = async ({ promise }) => {
   const user = await promise;
 
   return (
-    <Image 
-      alt='👨‍💻' 
-      width={100} 
-      height={100} 
-      src={user.avatar_url || data.avatarUrl} 
-      className="float-right rounded-3xl mx-4" 
+    <Image
+      alt='👨‍💻'
+      width={100}
+      height={100}
+      src={user.avatar_url || data.avatarUrl}
+      className="float-right rounded-3xl mx-4"
     />
   );
 };
@@ -62,7 +62,7 @@ const LandingComponent: React.FC = async () => {
 
   const navigation = [
     { name: "About", href: "/about" },
-    { name: "Projects", href: "/projects" },
+    { name: "Projects", href: "/project" },
     { name: "Contact", href: "/contact" },
   ];
 
