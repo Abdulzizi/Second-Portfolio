@@ -1,83 +1,54 @@
-<<<<<<< HEAD
-# Turborepo starter
+# Random Projects Repo
 
-This is an official starter Turborepo.
+This is a collection of random projects that I work on over time. For now, it includes my portfolio project, but I’ll be adding more as I continue experimenting and building.
 
-## Using this example
+## Current Project:
 
-Run the following command:
+- **Portfolio**: My personal portfolio built with [Next.js](https://nextjs.org/).
+
+## Using this repo
+
+To run any project within this repo, navigate to the specific project folder and follow the instructions below.
+
+### Install Dependencies
+
+First, install the dependencies:
 
 ```sh
-npx create-turbo@latest
+pnpm install
 ```
 
-## What's inside?
+### Build the Project
 
-This Turborepo includes the following packages/apps:
+To build the project, run:
 
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
+```sh
 pnpm build
 ```
 
 ### Develop
 
-To develop all apps and packages, run the following command:
+To start the development server:
 
-```
-cd my-turborepo
+```sh
 pnpm dev
 ```
 
-### Remote Caching
+### Additional Info
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+This repo is managed using [Turborepo](https://turbo.build/repo), making it easier to work on multiple projects and share configurations across apps and packages.
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+### What's Inside?
 
-```
-cd my-turborepo
-npx turbo login
-```
+Here’s what you’ll find in this repo so far:
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+- **Portfolio Project**: My personal portfolio website built with Next.js.
+- **Shared Components**: `@repo/ui` contains reusable React components that are shared between projects.
+- **ESLint and Prettier Configs**: Centralized linting and formatting configurations.
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+## Future Projects
 
-```
-npx turbo link
-```
+As I build and experiment more, I’ll be adding various other projects to this repo. Stay tuned for updates!
 
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
-=======
+- [ ] Fullstack e-commerce fashion website
+- [ ] Todo apps
